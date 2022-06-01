@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development node --trace-warnings ./src/index.js",
     "debug": "cross-env NODE_ENV=development node --trace-warnings --inspect=0.0.0.0:9229 --debug ./src/index.js",
+    "docker-up": "docker-compose -f ./docker-compose.yml up",
+    "postdocker-up": "docker-compose -f ./docker-compose.yml down --rmi 'all'",
     "start": "cross-env NODE_ENV=production node ./src/index.js",
     "test": "echo \"No tests yet...\""
   },
